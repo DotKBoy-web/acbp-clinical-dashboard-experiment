@@ -20,8 +20,10 @@ This repository contains the reproducibility artifact for the ACBP Clinical Dash
 
 The dashboard demo exposes semantic BI-style metric objects and direct SQL execution paths. It compares live SQL and ACBP query results, reports latency, and verifies deterministic result hashes for repeated local API hits. Fixed paper cards are separated from fresh local multi-hit measurements.
 
-## Related applied artifact
+## Related ACBP project
 
-- [ACBP Clinical Dashboardoy-web/acbp-clinical-dashboard-experiment
+This repository is linked to the earlier ACBP project page:
 
-This follow-up artifact applies ACBP to a clinical operational dashboard workload, comparing Live SQL against compiled ACBP execution and including a browser-based dashboard UI demo with semantic and direct SQL modes.
+- https://dotkboy-web.github.io/acbp/
+
+The earlier ACBP work introduced the SQL-native categorical–Boolean modeling approach for deterministic decision spaces. This repository applies ACBP to a reproducible clinical dashboard experiment with Live SQL vs compiled ACBP execution and a dashboard UI demo.
