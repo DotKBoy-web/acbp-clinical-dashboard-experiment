@@ -19,3 +19,9 @@ This repository contains the reproducibility artifact for the ACBP Clinical Dash
 ## Dashboard demo
 
 The dashboard demo exposes semantic BI-style metric objects and direct SQL execution paths. It compares live SQL and ACBP query results, reports latency, and verifies deterministic result hashes for repeated local API hits. Fixed paper cards are separated from fresh local multi-hit measurements.
+
+## Related applied artifact
+
+- [ACBP Clinical Dashboardoy-web/acbp-clinical-dashboard-experiment
+
+This follow-up artifact applies ACBP to a clinical operational dashboard workload, comparing Live SQL against compiled ACBP execution and including a browser-based dashboard UI demo with semantic and direct SQL modes.
