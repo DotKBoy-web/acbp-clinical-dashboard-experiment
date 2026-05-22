@@ -1,0 +1,33 @@
+# Node / dashboard UI
+06_dashboard/ui_demo/node_modules/
+06_dashboard/ui_demo/dist/
+06_dashboard/ui_demo/.vite/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.env
+
+# Jupyter
+.ipynb_checkpoints/
+
+# LaTeX / paper outputs - excluded for initial repo push
+10_paper/
+*.aux
+*.bbl
+*.blg
+*.log
+*.out
+*.synctex.gz
+
+# OS/editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Temporary files
+*.tmp
+*.bak

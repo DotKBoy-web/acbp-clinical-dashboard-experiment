@@ -1,0 +1,52 @@
+﻿# Software Versions
+
+This file records the software stack used for the ACBP clinical dashboard experiment.
+
+## Core software
+
+Python version: Python 3.11.9
+PostgreSQL client version: Not available on host; PostgreSQL runs inside Docker container postgres:15
+Docker environment: Docker Desktop
+Docker version: Docker version 24.0.6, build ed223bc
+Docker Compose version: Docker Compose version v2.23.0-desktop.1
+PowerShell version: 5.1.26100.8457
+Operating system: Microsoft Windows 11 Pro 10.0.26200
+
+## Database runtime
+
+PostgreSQL container name: acbp-postgres
+PostgreSQL image/tag: postgres:15
+PostgreSQL port mapping: 0.0.0.0:55432->5432/tcp
+
+## Python package versions
+
+psycopg2-binary: 2.9.10
+psycopg2: Not installed
+psycopg: 3.2.9
+pandas: 2.2.3
+matplotlib: 3.10.7
+numpy: 2.3.4
+
+## Reproducibility commands
+
+Data generation:
+
+    python 02_data_generation/generators/gen_inpatient.py --truncate --days 14 --arrivals_per_day 120 --seed 42 --host 127.0.0.1 --port 55432 --password acbp
+
+Analysis:
+
+    python 08_analysis/analyze_results.py
+
+## Full Python environment
+
+A full package snapshot is stored in:
+
+    01_environment/pip_freeze.txt
+
+It can be regenerated using:
+
+    pip freeze > 01_environment/pip_freeze.txt
+
+## Reproducibility note
+
+If software versions change, regenerate raw logs, plots, tables, and stats summaries.

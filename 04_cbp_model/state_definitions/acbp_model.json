@@ -1,0 +1,39 @@
+{
+"model_name": "fac01_ipd",
+"flags": [
+"f_admit_today",
+"f_disch_today",
+"f_census_live",
+"f_bedded_census_live",
+"f_has_discharge_order"
+],
+"categories": {
+"facility_key": ["FAC_01"],
+"building_type": ["IPD"],
+"loc_nurse_unit_cd": "ENUM_FROM_DB",
+"loc_room_cd": "ENUM_FROM_DB",
+"loc_bed_cd": "ENUM_FROM_DB"
+},
+"constraints": [
+{
+"type": "IMPLIES",
+"if": "f_bedded_census_live",
+"then": "f_census_live"
+},
+{
+"type": "FORBID_WHEN",
+"flag": "f_bedded_census_live",
+"category_condition": "loc_room_cd IS NULL OR loc_bed_cd IS NULL"
+},
+{
+"type": "FORBID_IF_SQL",
+"flag": "f_disch_today",
+"sql_predicate": "disch_dt_tm < inpatient_admit_dt_tm"
+},
+{
+"type": "IMPLIES",
+"if": "f_has_discharge_order",
+"then": "f_census_live"
+}
+]
+}

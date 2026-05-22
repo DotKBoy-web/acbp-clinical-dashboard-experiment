@@ -1,0 +1,1 @@
+-- Create indexes used in BOTH conditions

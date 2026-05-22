@@ -1,0 +1,35 @@
+﻿# Hardware Specifications
+
+This file records the hardware used to run the ACBP clinical dashboard experiment.
+
+## Host machine
+
+Computer name: LAPTOP-7EHJ7VPP
+CPU model: 11th Gen Intel(R) Core(TM) i7-1165G7 @ 2.80GHz
+CPU cores: 4
+Logical processors: 8
+Max clock speed MHz: 2803
+RAM: 16 GB
+Operating system: Microsoft Windows 11 Pro
+Operating system version: 10.0.26200
+
+## Storage
+
+NVMe SAMSUNG MZVL21T0HCLR-00B00 / SSD / 953.87 GB
+
+## Docker / database environment
+
+Docker environment: Docker Desktop
+Docker version: Docker version 24.0.6, build ed223bc
+Docker Compose version: Docker Compose version v2.23.0-desktop.1
+PostgreSQL container name: acbp-postgres
+PostgreSQL image/tag: postgres:15
+PostgreSQL port mapping: 0.0.0.0:55432->5432/tcp
+Container CPU limit: Docker Desktop default / no explicit container CPU limit
+Container memory limit: Docker Desktop default / no explicit container memory limit
+Database volume path: Docker Desktop managed volume: 288573fb4aa7f9271558121643d9ab4432176c88bf56edcd3f02fea6c5cc3774 mounted at /var/lib/postgresql/data
+
+## Reproducibility note
+
+Latency, buffer, CPU, and memory results should be interpreted relative to this hardware configuration.
+If the experiment is rerun on another machine, create a new hardware specification record.
