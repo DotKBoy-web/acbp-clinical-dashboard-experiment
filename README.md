@@ -14,7 +14,6 @@ This repository contains the reproducibility artifact for the ACBP Clinical Dash
 - `07_metrics_collection/`: metric collectors and raw logs
 - `08_analysis/`: analysis scripts and plots
 - `09_results/`: final figures, tables, and key findings
-- `10_paper/`: LaTeX paper source and compiled draft
 
 ## Dashboard demo
 

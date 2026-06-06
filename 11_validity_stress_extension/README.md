@@ -88,3 +88,50 @@ Uncertainty-aware ML diagnostic:
 - Isolated extension schema.
 - Single-node PostgreSQL Docker setup.
 - Results are intended to evaluate validity detection and complexity decomposition, not real-world clinical error frequency.
+
+## ML hyperparameters and split settings
+
+The uncertainty-aware validity diagnostic uses the following settings:
+
+Split design:
+
+- Repeated stratified shuffle split
+- Number of splits: 30
+- Test size: 0.30
+- Random seed: 42
+
+Preprocessing:
+
+- Categorical features: one-hot encoded with `handle_unknown="ignore"`
+- Numeric features: passed through directly
+- Missing length-of-stay value: filled with `-1`
+- Location identifiers are treated as categorical strings
+
+Classifier:
+
+- `RandomForestClassifier`
+- `n_estimators=300`
+- `random_state=42`
+- `class_weight="balanced"`
+- `min_samples_leaf=2`
+- `bootstrap=True`
+
+Reported metrics:
+
+- accuracy
+- valid F1
+- invalid F1
+- invalid precision
+- invalid recall
+- ROC-AUC
+- Brier score
+- log loss
+- 10-bin expected calibration error
+- approximate 95% confidence intervals across repeated splits
+
+Additional stress test:
+
+- leave-invalid-type-out diagnostic
+- output file: `outputs/validity_ml_leave_invalid_type_out.csv`
+
+No pretrained model is required or stored. The classifier is trained during the reproducibility run.
