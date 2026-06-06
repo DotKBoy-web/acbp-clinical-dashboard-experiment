@@ -25,7 +25,7 @@ This repository is linked to the earlier ACBP project page:
 
 - https://dotkboy-web.github.io/acbp/
 
-The earlier ACBP work introduced the SQL-native categoricalâ€“Boolean modeling approach for deterministic decision spaces. This repository applies ACBP to a reproducible clinical dashboard experiment with Live SQL vs compiled ACBP execution and a dashboard UI demo.
+The earlier ACBP work introduced the SQL-native categorical-Boolean modeling approach for deterministic decision spaces. This repository applies ACBP to a reproducible clinical dashboard experiment with Live SQL vs compiled ACBP execution and a dashboard UI demo.
 ## Validity-stress extension
 
 This repository includes an isolated validity-stress extension in `11_validity_stress_extension/`.
