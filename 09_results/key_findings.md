@@ -70,3 +70,30 @@ CBP demonstrates:
 
 > These results confirm that CBP improves performance by reducing runtime computation and memory access, not by approximating results.
 ```
+---
+
+## ✅ 7. Uncertainty-Aware Validity ML Diagnostic
+
+The validity-stress ML diagnostic was rerun using **30 repeated stratified splits** to avoid relying on a single train/test split.
+
+Live-blind baseline:
+
+- Accuracy: **0.9062**
+- Invalid F1: **0.0000**
+- Invalid recall: **0.0000**
+- ROC-AUC: **0.5000**
+- Brier score: **0.0938**
+- ECE: **0.0938**
+
+ACBP-labeled validity classifier:
+
+- Accuracy: **0.9994** [0.9991, 0.9998]
+- Invalid F1: **0.9970** [0.9951, 0.9990]
+- Invalid recall: **0.9989** [0.9980, 0.9998]
+- ROC-AUC: **1.0000**
+- Brier score: **0.0101** [0.0098, 0.0103]
+- ECE: **0.0620** [0.0611, 0.0629]
+
+✅ Interpretation:
+
+> The ML diagnostic is not a clinical prediction model. It tests whether the deterministic ACBP validity boundary is separable from the flag/category surface. The Live-blind baseline achieves high apparent accuracy only because most rows are valid, but it has zero invalid recall. ACBP makes invalid-state detection explicit.

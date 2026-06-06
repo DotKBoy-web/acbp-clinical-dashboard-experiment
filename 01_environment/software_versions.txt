@@ -50,3 +50,13 @@ It can be regenerated using:
 ## Reproducibility note
 
 If software versions change, regenerate raw logs, plots, tables, and stats summaries.
+Additional Python packages for validity-stress extension:
+
+scikit-learn: used by the uncertainty-aware validity ML diagnostic.
+matplotlib: used for DotK and ML plots.
+pandas: used for result tables.
+psycopg2-binary: used for PostgreSQL access from Python.
+
+Validity-stress reproduction command:
+
+python 11_validity_stress_extension/scripts/run_validity_stress_pipeline.py --host 127.0.0.1 --port 55432 --db acbp_db --user acbp --password acbp

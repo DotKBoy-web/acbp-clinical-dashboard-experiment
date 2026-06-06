@@ -1,4 +1,4 @@
-# ACBP Clinical Dashboard Experiment
+﻿# ACBP Clinical Dashboard Experiment
 
 This repository contains the reproducibility artifact for the ACBP Clinical Dashboard Experiment submitted to the ICDM 2026 Applied Track. It includes schema creation, synthetic inpatient data generation, live SQL baseline queries, ACBP compiled-state SQL artifacts, feed simulation scripts, metrics collection, analysis scripts, generated plots, and a browser-based dashboard UI demo comparing semantic and direct SQL execution modes.
 
@@ -26,4 +26,26 @@ This repository is linked to the earlier ACBP project page:
 
 - https://dotkboy-web.github.io/acbp/
 
-The earlier ACBP work introduced the SQL-native categorical–Boolean modeling approach for deterministic decision spaces. This repository applies ACBP to a reproducible clinical dashboard experiment with Live SQL vs compiled ACBP execution and a dashboard UI demo.
+The earlier ACBP work introduced the SQL-native categoricalâ€“Boolean modeling approach for deterministic decision spaces. This repository applies ACBP to a reproducible clinical dashboard experiment with Live SQL vs compiled ACBP execution and a dashboard UI demo.
+## Validity-stress extension
+
+This repository includes an isolated validity-stress extension in `11_validity_stress_extension/`.
+
+The extension reuses the same benchmark database and Live SQL / ACBP paths, creates only the isolated `validity_ext` schema, and reports:
+
+- DotK valid/invalid complexity decomposition
+- ACBP validity labels
+- uncertainty-aware validity ML diagnostic
+- 30 repeated stratified splits
+- calibration-oriented metrics
+
+Reproduce from the repository root:
+
+    python .\11_validity_stress_extension\scripts\run_validity_stress_pipeline.py --host 127.0.0.1 --port 55432 --db acbp_db --user acbp --password acbp
+
+Key outputs:
+
+- `11_validity_stress_extension/outputs/ml_key_findings.md`
+- `11_validity_stress_extension/outputs/dotk_complexity_summary.csv`
+- `11_validity_stress_extension/outputs/validity_ml_uncertainty_summary.csv`
+- `09_results/validity_ml_key_findings.md`

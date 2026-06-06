@@ -1,18 +1,9 @@
 # Final Figures
 
-Place final figure files used in reports or README pages here.
+This folder contains figures referenced by the paper and supporting artifact:
 
-Recommended filenames:
-
-- fig_latency_timeseries.png
-- fig_speedup_timeseries.png
-- fig_latency_boxplot.png
-- fig_buffers_hits_timeseries.png
-- fig_buffers_ratio_timeseries.png
-- fig_resources_timeseries.png
-
-These should be copied from:
-
-    08_analysis/plots/
-
-Do not manually alter plotted values.
+- `uml_schema.png`: UML schema and ACBP-derived model mapping.
+- `dashboard_snap.png`: Browser dashboard demo screenshot, retained in the artifact but not inserted into the final 10-page paper.
+- `dotk_bits.png`: DotK complexity decomposition from the validity-stress extension.
+- `dotk_support_counts.png`: Valid/invalid feature-state support counts.
+- `validity_ml_metrics.png`: Validity-detection diagnostic comparison.

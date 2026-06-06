@@ -1,15 +1,9 @@
-# Result Tables
+# Final Tables
 
-This directory stores final tables derived from the analysis pipeline.
+This folder contains table outputs supporting the paper and artifact:
 
-Recommended tables:
-
-- latency statistics
-- speedup statistics
-- buffer reduction statistics
-- reproducibility summary
-
-Tables should be generated or copied from:
-
-    08_analysis/analyze_results.py
-    08_analysis/stats_summary.md
+- `dotk_complexity_summary.csv`
+- `validity_ml_metrics.csv`
+- `case_type_validity_summary.csv`
+- `rule_violation_summary.csv`
+- `validity_ml_classification_report.csv`
